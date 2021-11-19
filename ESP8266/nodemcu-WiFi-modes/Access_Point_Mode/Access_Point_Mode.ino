@@ -2,7 +2,7 @@
  
 // Set WiFi credentials
 #define WIFI_SSID "POCO X3 NFC"
-#define WIFI_PASS "12345678"
+#define WIFI_PASS "YOUR_PASSWORD"
 
 // Set AP credentials
 #define AP_SSID "ESP8266"
