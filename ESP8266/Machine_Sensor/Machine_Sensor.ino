@@ -6,7 +6,7 @@
 
 // Replace with your network credentials
 const char* ssid = "POCO X3 NFC";
-const char* password = "12345678";
+const char* password = "YOUR_PASSWORD";
 
 const int output = 2;
 const int output_buzzer = 16;
