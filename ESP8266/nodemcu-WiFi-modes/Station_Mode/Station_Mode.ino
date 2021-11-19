@@ -6,11 +6,11 @@ const int RSSI_MIN =-100;// define minimum strength of signal in dBm
 const int displayEnc=1;// set to 1 to display Encryption or 0 not to display
 
 #define WIFI_SSID "POCO X3 NFC"
-#define WIFI_PASS "12345678"
+#define WIFI_PASS "YOUR_PASSWORD"
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Robojax Wifi Signal Scan");
+  Serial.println("Wifi Signal Scan");
   // Set WiFi to station mode and disconnect from an AP if it was previously connected
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
@@ -74,16 +74,6 @@ void loop() {
   
 }// loop
 
-
-
-/*
- * Written by Ahmad Shamshiri
-  * with lots of research, this sources was used:
- * https://support.randomsolutions.nl/827069-Best-dBm-Values-for-Wifi 
- * This is approximate percentage calculation of RSSI
- * WiFi Signal Strength Calculation
- * Written Aug 08, 2019 at 21:45 in Ajax, Ontario, Canada
- */
 
 int dBmtoPercentage(int dBm)
 {
