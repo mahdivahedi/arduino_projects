@@ -2,8 +2,6 @@
 #include <ESPAsyncWebServer.h>
 #include <ESPAsyncTCP.h>
 
-// Mohammad mahdi vahedi      9731069  
-
 // Replace with your network credentials
 const char* ssid = "POCO X3 NFC";
 const char* password = "YOUR_PASSWORD";
@@ -22,7 +20,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Question 8 Web Server</title>
+  <title> Question 8 Web Server</title>
   <style>
     html {font-family: Arial; display: inline-block; text-align: center;}
     h2 {font-size: 3.1rem;}
@@ -35,7 +33,7 @@ const char index_html[] PROGMEM = R"rawliteral(
   </style>
 </head>
 <body>
-  <h2>Question 8 Web Server</h2>
+  <h2> Question 8 Web Server</h2>
   <p><span id="textSliderValue">%SLIDERVALUE%</span></p>
   <p><input type="range" onchange="updateSliderPWM(this)" id="pwmSlider" min="0" max="900" value="%SLIDERVALUE%" step="1" class="slider"></p>
 <script>
@@ -66,8 +64,6 @@ void setup(){
   pinMode(output_buzzer, OUTPUT);
   // Serial port for debugging purposes
   Serial.begin(115200);
-
-  analogWrite(output, sliderValue.toInt());
   
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
@@ -106,7 +102,7 @@ void setup(){
   
 void loop() {
 
-  if (sliderValue.toInt() < 300 ){
+  if (sliderValue.toInt() < 300 ){  // change the amount with your arbitrary value 
     digitalWrite(output, HIGH);
     digitalWrite(output_buzzer, HIGH);
     delay(1000);
